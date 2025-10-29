@@ -1,6 +1,6 @@
 # CV Application
 
-A website to enter details and generate a CV. Built with HTML5, CSS3, and JavaScript (ES6+), bundled and optimized using Webpack.
+A website to enter details and generate a CV. Built with React, Vite, HTML5, CSS3, and JavaScript (ES6+).
 
 👉 [Live Demo]()
 
