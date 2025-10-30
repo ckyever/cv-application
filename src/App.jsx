@@ -4,6 +4,7 @@ import "./App.css";
 import Sidebar from "./components/Sidebar.jsx";
 import Resume from "./components/Resume.jsx";
 
+// CKYTODO: Move this into it's own data file
 const exampleResume = {
   fullname: "Ckyever Gaviola",
   email: "ckyever@gmail.com",
@@ -13,40 +14,40 @@ const exampleResume = {
     {
       id: 0,
       reference: "Suzanne Cory High School",
-      school: "Suzanne Cory High School",
-      degree: "VCE - Year 12",
-      location: "Werribee, Australia",
-      startDate: "01/01/2011",
-      endDate: "01/12/2018",
+      School: "Suzanne Cory High School",
+      Degree: "VCE - Year 12",
+      Location: "Werribee, Australia",
+      "Start Date": "01/01/2011",
+      "End Date": "01/12/2018",
     },
     {
       id: 1,
       reference: "The University of Melbourne",
-      school: "The University of Melbourne",
-      degree: "Bachelor of Science - Major in Computing and Software Systems",
-      location: "Melbourne, Australia",
-      startDate: "01/01/2016",
-      endDate: "01/12/2019",
+      School: "The University of Melbourne",
+      Degree: "Bachelor of Science - Major in Computing and Software Systems",
+      Location: "Melbourne, Australia",
+      "Start Date": "01/01/2016",
+      "End Date": "01/12/2019",
     },
   ],
   experienceList: [
     {
       id: 2,
       reference: "Canva",
-      company: "Canva",
-      title: "Junior Software Engineer",
-      location: "Melbourne, Australia",
-      startDate: "01/01/2020",
-      endDate: "01/04/2025",
+      Company: "Canva",
+      Title: "Junior Software Engineer",
+      Location: "Melbourne, Australia",
+      "Start Date": "01/01/2020",
+      "End Date": "01/04/2025",
     },
     {
       id: 3,
       reference: "Google",
-      company: "Google",
-      title: "Senior Software Engineer",
-      location: "Melbourne, Australia",
-      startDate: "01/04/2025",
-      endDate: "Present",
+      Company: "Google",
+      Title: "Senior Software Engineer",
+      Location: "Melbourne, Australia",
+      "Start Date": "01/04/2025",
+      "End Date": "Present",
     },
   ],
 };

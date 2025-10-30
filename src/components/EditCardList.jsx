@@ -50,13 +50,13 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
           <Card title="Personal Details" fields={personalDetailsFields} />
           <Card
             title="Education"
-            elements={
+            editElements={
               resumeData.educationList.length > 0 && resumeData.educationList
             }
           />
           <Card
             title="Experience"
-            elements={
+            editElements={
               resumeData.experienceList.length > 0 && resumeData.experienceList
             }
           />
