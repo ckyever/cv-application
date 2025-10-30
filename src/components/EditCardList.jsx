@@ -48,8 +48,18 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
       return (
         <div className="edit-card-list">
           <Card title="Personal Details" fields={personalDetailsFields} />
-          {/* <Card title="Education" />
-          <Card title="Experience" /> */}
+          <Card
+            title="Education"
+            elements={
+              resumeData.educationList.length > 0 && resumeData.educationList
+            }
+          />
+          <Card
+            title="Experience"
+            elements={
+              resumeData.experienceList.length > 0 && resumeData.experienceList
+            }
+          />
         </div>
       );
     case SIDEBAR_MODE.customise:

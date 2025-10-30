@@ -22,6 +22,21 @@ function Resume({ resumeData }) {
           );
         })}
       </section>
+      <section className="experience-list">
+        <h2>Experience</h2>
+        {resumeData.experienceList.map((experience) => {
+          return (
+            <div className="experience" key={experience.id}>
+              <h3>{experience.company}</h3>
+              <p>{experience.title}</p>
+              <p>{experience.location}</p>
+              <p>
+                {experience.startDate} - {experience.endDate}
+              </p>
+            </div>
+          );
+        })}
+      </section>
     </div>
   );
 }
