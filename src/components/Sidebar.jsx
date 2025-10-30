@@ -8,7 +8,7 @@ import EditSwitcher from "./EditSwitcher.jsx";
 import Actions from "./Actions.jsx";
 import EditCardList from "./EditCardList.jsx";
 
-function Sidebar() {
+function Sidebar({ resumeData, setResumeData }) {
   const [sidebarMode, setSidebarMode] = useState(SIDEBAR_MODE.content);
 
   return (
@@ -16,7 +16,11 @@ function Sidebar() {
       <div className="sidebar">
         <EditSwitcher handleSwitch={setSidebarMode} />
         <Actions />
-        <EditCardList editMode={sidebarMode} />
+        <EditCardList
+          editMode={sidebarMode}
+          resumeData={resumeData}
+          setResumeData={setResumeData}
+        />
       </div>
     </>
   );

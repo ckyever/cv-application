@@ -8,7 +8,11 @@ function Field({ fieldData }) {
         id={fieldData.id}
         className="field"
         type={fieldData.fieldType}
-        onChange={fieldData.handleOnChange}
+        onChange={
+          fieldData.handleOnChange == null
+            ? undefined
+            : (event) => fieldData.handleOnChange(event.target.value)
+        }
       />
     </div>
   );
