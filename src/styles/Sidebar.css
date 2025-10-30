@@ -5,7 +5,7 @@
   border: 1px solid black;
 }
 
-.sidebar div {
+.sidebar > div {
   border: 1px solid black;
   width: 400px;
 }
