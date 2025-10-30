@@ -1,9 +1,11 @@
 import "./App.css";
 
+import Sidebar from "./components/Sidebar.jsx";
+
 function App() {
   return (
     <>
-      <h1>CV Builder</h1>
+      <Sidebar />
     </>
   );
 }
