@@ -46,7 +46,7 @@ const exampleResume = {
       title: "Senior Software Engineer",
       location: "Melbourne, Australia",
       startDate: "01/04/2025",
-      endDate: "Preset",
+      endDate: "Present",
     },
   ],
 };
