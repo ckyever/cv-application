@@ -3,14 +3,14 @@ import Card from "./Card.jsx";
 import { SIDEBAR_MODE } from "../constants.js";
 import Field from "../libs/Field.js";
 
-const personalDetailsFields = [
-  new Field("fullname", "Full Name", "text"),
-  new Field("email", "Email", "email"),
-  new Field("phone-number", "Phone Number", "text"),
-  new Field("address", "Address", "text"),
-];
-
 function EditCardList({ editMode }) {
+  const personalDetailsFields = [
+    new Field("fullname", "Full Name", "text"),
+    new Field("email", "Email", "email"),
+    new Field("phone-number", "Phone Number", "text"),
+    new Field("address", "Address", "text"),
+  ];
+
   switch (editMode) {
     case SIDEBAR_MODE.content:
       return (
