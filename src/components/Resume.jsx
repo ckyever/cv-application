@@ -1,11 +1,15 @@
+import "../styles/Resume.css";
+
 function Resume({ resumeData }) {
   return (
     <div className="resume">
       <section className="header">
         <h1>{resumeData.fullname}</h1>
-        <p>{resumeData.email}</p>
-        <p>{resumeData.phoneNumber}</p>
-        <p>{resumeData.address}</p>
+        <div className="personal-details">
+          <p>{resumeData.email}</p>
+          <p>{resumeData.phoneNumber}</p>
+          <p>{resumeData.address}</p>
+        </div>
       </section>
       <section className="education-list">
         <h2>Education</h2>
