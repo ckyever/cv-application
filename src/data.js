@@ -33,6 +33,8 @@ export const exampleResume = {
       id: getNextElementId(),
       Company: "Canva",
       Title: "Junior Software Engineer",
+      Description:
+        "Collaborated with designers and senior engineers to develop intuitive, high-performance web features using React, TypeScript, and modern UI frameworks. Implemented reusable components, improved accessibility, and optimized rendering performance for millions of users. Worked closely with backend teams to integrate APIs, participated in agile sprints, and contributed to maintaining a clean, scalable codebase through code reviews and automated testing.",
       Location: "Melbourne, Australia",
       "Start Date": "01/01/2020",
       "End Date": "01/04/2025",
@@ -41,6 +43,8 @@ export const exampleResume = {
       id: getNextElementId(),
       Company: "Google",
       Title: "Senior Software Engineer",
+      Description:
+        "Designed and led development of large-scale distributed systems using Python, Go, and Kubernetes to support high-traffic Google services. Architected resilient backend solutions, improved system reliability, and optimized data pipelines for speed and scalability. Mentored junior engineers, reviewed code for best practices, and collaborated cross-functionally to align technical design with business goals. Championed performance monitoring and automation to enhance deployment efficiency and service uptime.",
       Location: "Melbourne, Australia",
       "Start Date": "01/04/2025",
       "End Date": "Present",
@@ -64,6 +68,8 @@ export function createExperienceTemplate() {
     id: getNextElementId(),
     Company: "New Company",
     Title: "Software Engineer",
+    Description:
+      "Developed high-performance backend systems using Rust, focusing on reliability, concurrency, and memory safety. Collaborated with teams to optimize services, improve code quality, and deliver efficient production-ready solutions.",
     Location: "Melbourne, Australia",
     "Start Date": "01/01/2020",
     "End Date": "Present",

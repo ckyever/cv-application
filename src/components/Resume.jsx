@@ -16,15 +16,15 @@ function Resume({ resumeData }) {
         {resumeData.educationList.map((education) => {
           return (
             <div className="education" key={education.id}>
-              <div className="description">
+              <div className="details">
                 <h3>{education["School"]}</h3>
                 <p>{education["Degree"]}</p>
               </div>
-              <div className="description">
+              <div className="duration-location">
+                <p>{education["Location"]}</p>
                 <p>
                   {education["Start Date"]} - {education["End Date"]}
                 </p>
-                <p>{education["Location"]}</p>
               </div>
             </div>
           );
@@ -35,16 +35,17 @@ function Resume({ resumeData }) {
         {resumeData.experienceList.map((experience) => {
           return (
             <div className="experience" key={experience.id}>
-              <div className="description">
+              <div className="details">
                 <h3>{experience["Company"]}</h3>
-                <p>{experience["Title"]}</p>
+                <p className="title">{experience["Title"]}</p>
               </div>
               <div className="duration-location">
+                <p>{experience["Location"]}</p>
                 <p>
                   {experience["Start Date"]} - {experience["End Date"]}
                 </p>
-                <p>{experience["Location"]}</p>
               </div>
+              <p className="description">{experience["Description"]}</p>
             </div>
           );
         })}

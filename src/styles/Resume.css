@@ -33,3 +33,16 @@
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
+
+.resume .duration-location {
+  font-style: italic;
+}
+
+.resume .experience .description {
+  grid-column: span 2;
+  margin-top: 8px;
+}
+
+.resume .experience .title {
+  font-style: italic;
+}
