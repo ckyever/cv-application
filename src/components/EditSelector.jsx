@@ -1,16 +1,23 @@
-import { useState } from "react";
 import "../styles/EditSelector.css";
 
 import FieldData from "../libs/Field.js";
 import Field from "./Field.jsx";
 
-function EditSelector({ listKey, element, resumeData, setResumeData }) {
-  const [isExpanded, setIsExpanded] = useState(false);
+function EditSelector({
+  listKey,
+  element,
+  isExpanded,
+  setExpandedId,
+  resumeData,
+  setResumeData,
+}) {
   return (
     <div className="edit-selector">
       <button
         className="edit-element"
-        onClick={() => setIsExpanded(!isExpanded)}
+        onClick={() =>
+          isExpanded ? setExpandedId(null) : setExpandedId(element.id)
+        }
       >
         <p>Edit - {element.reference}</p>
       </button>

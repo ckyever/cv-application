@@ -1,6 +1,8 @@
+import { useState } from "react";
 import "../styles/Card.css";
-import Field from "./Field.jsx";
+
 import EditSelector from "./EditSelector.jsx";
+import Field from "./Field.jsx";
 
 function Card({
   title,
@@ -10,6 +12,7 @@ function Card({
   resumeData,
   setResumeData,
 }) {
+  const [expandedId, setExpandedId] = useState(null);
   return (
     <div className="card">
       <h2>{title}</h2>
@@ -23,6 +26,8 @@ function Card({
             key={element.id}
             listKey={editElementKey}
             element={element}
+            isExpanded={element.id === expandedId}
+            setExpandedId={setExpandedId}
             resumeData={resumeData}
             setResumeData={setResumeData}
           />
