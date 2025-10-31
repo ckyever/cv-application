@@ -55,18 +55,14 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
           <Card
             title="Education"
             editElementKey={EDIT_ELEMENT_KEY.education}
-            editElements={
-              resumeData.educationList.length > 0 && resumeData.educationList
-            }
+            editElements={resumeData.educationList}
             resumeData={resumeData}
             setResumeData={setResumeData}
           />
           <Card
             title="Experience"
             editElementKey={EDIT_ELEMENT_KEY.experience}
-            editElements={
-              resumeData.experienceList.length > 0 && resumeData.experienceList
-            }
+            editElements={resumeData.experienceList}
             resumeData={resumeData}
             setResumeData={setResumeData}
           />

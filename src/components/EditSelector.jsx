@@ -3,6 +3,15 @@ import "../styles/EditSelector.css";
 import FieldData from "../libs/Field.js";
 import Field from "./Field.jsx";
 
+function handleDelete(listKey, elementId, resumeData, setResumeData) {
+  const newResumeData = { ...resumeData };
+  const index = newResumeData[listKey].findIndex(
+    (element) => element.id === elementId
+  );
+  newResumeData[listKey].splice(index, 1);
+  setResumeData(newResumeData);
+}
+
 function EditSelector({
   listKey,
   element,
@@ -20,14 +29,24 @@ function EditSelector({
 
   return (
     <div className="edit-selector">
-      <button
-        className="edit-element"
-        onClick={() =>
-          isExpanded ? setExpandedId(null) : setExpandedId(element.id)
-        }
-      >
-        <p>Edit - {reference}</p>
-      </button>
+      <div className="selector-buttons">
+        <button
+          className="edit-element"
+          onClick={() =>
+            isExpanded ? setExpandedId(null) : setExpandedId(element.id)
+          }
+        >
+          <p>Edit - {reference}</p>
+        </button>
+        <button
+          className="delete-element"
+          onClick={() => {
+            handleDelete(listKey, element.id, resumeData, setResumeData);
+          }}
+        >
+          Delete
+        </button>
+      </div>
       <form className={"edit-form" + (isExpanded ? "show" : "")}>
         {Object.keys(element).map((key) => {
           if (key !== "reference" && key !== "id") {
