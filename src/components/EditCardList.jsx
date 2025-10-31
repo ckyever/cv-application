@@ -30,16 +30,20 @@ function updateAddress(resumeData, setResumeData, value) {
 
 function EditCardList({ editMode, resumeData, setResumeData }) {
   const personalDetailsFields = [
-    new Field("fullname", "Full Name", "text", (value) =>
+    new Field("fullname", "Full Name", "text", resumeData.fullname, (value) =>
       updateFullname(resumeData, setResumeData, value)
     ),
-    new Field("email", "Email", "email", (value) =>
+    new Field("email", "Email", "email", resumeData.email, (value) =>
       updateEmail(resumeData, setResumeData, value)
     ),
-    new Field("phone-number", "Phone Number", "text", (value) =>
-      updatePhoneNumber(resumeData, setResumeData, value)
+    new Field(
+      "phone-number",
+      "Phone Number",
+      "text",
+      resumeData.phoneNumber,
+      (value) => updatePhoneNumber(resumeData, setResumeData, value)
     ),
-    new Field("address", "Address", "text", (value) =>
+    new Field("address", "Address", "text", resumeData.address, (value) =>
       updateAddress(resumeData, setResumeData, value)
     ),
   ];

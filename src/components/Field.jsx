@@ -1,6 +1,9 @@
+import { useState } from "react";
 import "../styles/Field.css";
 
 function Field({ fieldData }) {
+  const [value, setValue] = useState(fieldData.initialValue);
+
   return (
     <div className="field">
       <label htmlFor={fieldData.id}>{fieldData.label}</label>
@@ -8,11 +11,13 @@ function Field({ fieldData }) {
         id={fieldData.id}
         className="field"
         type={fieldData.fieldType}
-        onChange={
+        value={value}
+        onChange={(event) => {
+          setValue(event.target.value);
           fieldData.handleOnChange == null
             ? undefined
-            : (event) => fieldData.handleOnChange(event.target.value)
-        }
+            : fieldData.handleOnChange(event.target.value);
+        }}
       />
     </div>
   );

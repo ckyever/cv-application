@@ -26,7 +26,13 @@ function EditSelector({ listKey, element, resumeData, setResumeData }) {
               newResumeData[listKey][index][key] = value;
               setResumeData(newResumeData);
             };
-            const fieldData = new FieldData(id, key, "text", handleOnChange);
+            const fieldData = new FieldData(
+              id,
+              key,
+              "text",
+              element[key],
+              handleOnChange
+            );
             return <Field key={id} fieldData={fieldData} />;
           }
         })}
