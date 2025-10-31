@@ -4,7 +4,7 @@ import "../styles/EditSelector.css";
 import FieldData from "../libs/Field.js";
 import Field from "./Field.jsx";
 
-function EditSelector({ element }) {
+function EditSelector({ listKey, element, resumeData, setResumeData }) {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
     <div className="edit-selector">
@@ -18,7 +18,15 @@ function EditSelector({ element }) {
         {Object.keys(element).map((key) => {
           if (key !== "reference" && key !== "id") {
             const id = `${element.id}-${key}`;
-            const fieldData = new FieldData(id, key, "text");
+            const handleOnChange = (value) => {
+              const newResumeData = { ...resumeData };
+              const index = newResumeData[listKey].findIndex(
+                (item) => item.id === element.id
+              );
+              newResumeData[listKey][index][key] = value;
+              setResumeData(newResumeData);
+            };
+            const fieldData = new FieldData(id, key, "text", handleOnChange);
             return <Field key={id} fieldData={fieldData} />;
           }
         })}

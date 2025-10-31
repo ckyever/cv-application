@@ -2,7 +2,14 @@ import "../styles/Card.css";
 import Field from "./Field.jsx";
 import EditSelector from "./EditSelector.jsx";
 
-function Card({ title, fields, editElements }) {
+function Card({
+  title,
+  fields,
+  editElementKey,
+  editElements,
+  resumeData,
+  setResumeData,
+}) {
   return (
     <div className="card">
       <h2>{title}</h2>
@@ -12,7 +19,13 @@ function Card({ title, fields, editElements }) {
       {editElements &&
         editElements.length > 0 &&
         editElements.map((element) => (
-          <EditSelector key={element.id} element={element} />
+          <EditSelector
+            key={element.id}
+            listKey={editElementKey}
+            element={element}
+            resumeData={resumeData}
+            setResumeData={setResumeData}
+          />
         ))}
     </div>
   );

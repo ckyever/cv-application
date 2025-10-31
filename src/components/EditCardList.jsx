@@ -2,6 +2,7 @@ import Card from "./Card.jsx";
 
 import { SIDEBAR_MODE } from "../constants.js";
 import Field from "../libs/Field.js";
+import { resume } from "react-dom/server";
 
 function updateFullname(resumeData, setResumeData, value) {
   const newResumeData = { ...resumeData };
@@ -50,15 +51,21 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
           <Card title="Personal Details" fields={personalDetailsFields} />
           <Card
             title="Education"
+            editElementKey="educationList"
             editElements={
               resumeData.educationList.length > 0 && resumeData.educationList
             }
+            resumeData={resumeData}
+            setResumeData={setResumeData}
           />
           <Card
             title="Experience"
+            editElementKey="experienceList"
             editElements={
               resumeData.experienceList.length > 0 && resumeData.experienceList
             }
+            resumeData={resumeData}
+            setResumeData={setResumeData}
           />
         </div>
       );
