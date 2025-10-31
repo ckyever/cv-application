@@ -36,7 +36,7 @@ function EditSelector({
             isExpanded ? setExpandedId(null) : setExpandedId(element.id)
           }
         >
-          <p>Edit - {reference}</p>
+          <p>{reference}</p>
         </button>
         <button
           className="delete-element"
