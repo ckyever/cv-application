@@ -9,24 +9,24 @@ import {
 import EditSelector from "./EditSelector.jsx";
 import Field from "./Field.jsx";
 
-// Click add
-// Add new empty object to resumeData
 function addNewElement(editElementKey, resumeData, setResumeData) {
   let newResumeData;
+  let newElement;
   switch (editElementKey) {
     case EDIT_ELEMENT_KEY.education:
       newResumeData = { ...resumeData };
-      const newEducation = createEmptyEducationTemplate();
-      newResumeData.educationList.push(newEducation);
+      newElement = createEmptyEducationTemplate();
+      newResumeData.educationList.push(newElement);
       setResumeData(newResumeData);
-      return newEducation.id;
+      break;
     case EDIT_ELEMENT_KEY.experience:
       newResumeData = { ...resumeData };
-      const newExperience = createEmptyExperienceTemplate();
-      newResumeData.experienceList.push(newExperience);
+      newElement = createEmptyExperienceTemplate();
+      newResumeData.experienceList.push(newElement);
       setResumeData(newResumeData);
-      return newExperience.id;
+      break;
   }
+  return newElement == null ? null : newElement.id;
 }
 
 function Card({
