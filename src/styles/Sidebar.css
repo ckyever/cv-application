@@ -2,8 +2,5 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.sidebar > div {
-  width: 400px;
+  flex-grow: 1;
 }
