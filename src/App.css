@@ -1,3 +1,23 @@
+:root {
+  --main-background-color: #ebecef;
+  --card-background-color: #ffffff;
+  --main-text-color: #010101;
+  --alt-text-color: #ffffff;
+  --accent-color: #0f364d;
+}
+
+* {
+  outline-color: #3c75d8;
+}
+
+body {
+  background-color: var(--main-background-color);
+}
+
+::selection {
+  background: #ffec8f;
+}
+
 .app {
   display: flex;
   justify-content: center;

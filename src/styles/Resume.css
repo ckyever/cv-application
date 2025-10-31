@@ -2,6 +2,7 @@
   width: 795px;
   height: 1125px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  background-color: var(--card-background-color);
 }
 
 .resume .header {
@@ -9,8 +10,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #0f364d;
-  color: white;
+  background-color: var(--accent-color);
+  color: var(--alt-text-color);
 }
 
 .resume .header .personal-details {
@@ -23,7 +24,7 @@
 }
 
 .resume section h2 {
-  background-color: #e8ebed;
+  background-color: var(--main-background-color);
   text-align: center;
 }
 

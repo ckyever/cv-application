@@ -9,7 +9,6 @@ function Field({ fieldData }) {
       <label htmlFor={fieldData.id}>{fieldData.label}</label>
       <input
         id={fieldData.id}
-        className="field"
         type={fieldData.fieldType}
         value={value}
         onChange={(event) => {
