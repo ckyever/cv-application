@@ -4,7 +4,7 @@ import { SIDEBAR_MODE } from "../constants.js";
 
 function EditSwitcher({ handleSwitch }) {
   return (
-    <div className="edit-switcher">
+    <div className="edit-switcher card">
       <button
         onClick={() => {
           handleSwitch(SIDEBAR_MODE.content);

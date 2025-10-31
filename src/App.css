@@ -1,5 +1,6 @@
 .app {
   display: flex;
+  justify-content: center;
   margin: 40px;
   gap: 40px;
 }
