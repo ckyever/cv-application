@@ -1,3 +1,10 @@
+let elementId = 0;
+
+function getNextElementId() {
+  elementId = elementId + 1;
+  return elementId;
+}
+
 export const exampleResume = {
   fullname: "Ckyever Gaviola",
   email: "ckyever@gmail.com",
@@ -5,7 +12,7 @@ export const exampleResume = {
   address: "Melbourne, Australia",
   educationList: [
     {
-      id: 0,
+      id: getNextElementId(),
       reference: "Suzanne Cory High School",
       School: "Suzanne Cory High School",
       Degree: "VCE - Year 12",
@@ -14,7 +21,7 @@ export const exampleResume = {
       "End Date": "01/12/2018",
     },
     {
-      id: 1,
+      id: getNextElementId(),
       reference: "The University of Melbourne",
       School: "The University of Melbourne",
       Degree: "Bachelor of Science - Major in Computing and Software Systems",
@@ -25,7 +32,7 @@ export const exampleResume = {
   ],
   experienceList: [
     {
-      id: 2,
+      id: getNextElementId(),
       reference: "Canva",
       Company: "Canva",
       Title: "Junior Software Engineer",
@@ -34,7 +41,7 @@ export const exampleResume = {
       "End Date": "01/04/2025",
     },
     {
-      id: 3,
+      id: getNextElementId(),
       reference: "Google",
       Company: "Google",
       Title: "Senior Software Engineer",
@@ -44,3 +51,27 @@ export const exampleResume = {
     },
   ],
 };
+
+export function createEmptyEducationTemplate() {
+  return {
+    id: getNextElementId(),
+    reference: "New Education",
+    School: "New Education",
+    Degree: "",
+    Location: "",
+    "Start Date": "",
+    "End Date": "",
+  };
+}
+
+export function createEmptyExperienceTemplate() {
+  return {
+    id: getNextElementId(),
+    reference: "New Experience",
+    Company: "New Experience",
+    Title: "",
+    Location: "",
+    "Start Date": "",
+    "End Date": "",
+  };
+}

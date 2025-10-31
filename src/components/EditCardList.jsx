@@ -1,6 +1,6 @@
 import Card from "./Card.jsx";
 
-import { SIDEBAR_MODE } from "../constants.js";
+import { SIDEBAR_MODE, EDIT_ELEMENT_KEY } from "../constants.js";
 import Field from "../libs/Field.js";
 
 function updateFullname(resumeData, setResumeData, value) {
@@ -54,7 +54,7 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
           <Card title="Personal Details" fields={personalDetailsFields} />
           <Card
             title="Education"
-            editElementKey="educationList"
+            editElementKey={EDIT_ELEMENT_KEY.education}
             editElements={
               resumeData.educationList.length > 0 && resumeData.educationList
             }
@@ -63,7 +63,7 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
           />
           <Card
             title="Experience"
-            editElementKey="experienceList"
+            editElementKey={EDIT_ELEMENT_KEY.experience}
             editElements={
               resumeData.experienceList.length > 0 && resumeData.experienceList
             }
