@@ -2,10 +2,7 @@ import { useState } from "react";
 import "../styles/Card.css";
 
 import { EDIT_ELEMENT_KEY } from "../constants.js";
-import {
-  createEmptyEducationTemplate,
-  createEmptyExperienceTemplate,
-} from "../data.js";
+import { createEducationTemplate, createExperienceTemplate } from "../data.js";
 import EditSelector from "./EditSelector.jsx";
 import Field from "./Field.jsx";
 
@@ -15,13 +12,13 @@ function addNewElement(editElementKey, resumeData, setResumeData) {
   switch (editElementKey) {
     case EDIT_ELEMENT_KEY.education:
       newResumeData = { ...resumeData };
-      newElement = createEmptyEducationTemplate();
+      newElement = createEducationTemplate();
       newResumeData.educationList.push(newElement);
       setResumeData(newResumeData);
       break;
     case EDIT_ELEMENT_KEY.experience:
       newResumeData = { ...resumeData };
-      newElement = createEmptyExperienceTemplate();
+      newElement = createExperienceTemplate();
       newResumeData.experienceList.push(newElement);
       setResumeData(newResumeData);
       break;

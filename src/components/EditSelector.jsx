@@ -11,6 +11,13 @@ function EditSelector({
   resumeData,
   setResumeData,
 }) {
+  const reference =
+    element.School != null
+      ? element.School
+      : element.Company != null
+      ? element.Company
+      : null;
+
   return (
     <div className="edit-selector">
       <button
@@ -19,7 +26,7 @@ function EditSelector({
           isExpanded ? setExpandedId(null) : setExpandedId(element.id)
         }
       >
-        <p>Edit - {element.reference}</p>
+        <p>Edit - {reference}</p>
       </button>
       <form className={"edit-form" + (isExpanded ? "show" : "")}>
         {Object.keys(element).map((key) => {

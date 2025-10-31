@@ -13,7 +13,6 @@ export const exampleResume = {
   educationList: [
     {
       id: getNextElementId(),
-      reference: "Suzanne Cory High School",
       School: "Suzanne Cory High School",
       Degree: "VCE - Year 12",
       Location: "Werribee, Australia",
@@ -22,7 +21,6 @@ export const exampleResume = {
     },
     {
       id: getNextElementId(),
-      reference: "The University of Melbourne",
       School: "The University of Melbourne",
       Degree: "Bachelor of Science - Major in Computing and Software Systems",
       Location: "Melbourne, Australia",
@@ -33,7 +31,6 @@ export const exampleResume = {
   experienceList: [
     {
       id: getNextElementId(),
-      reference: "Canva",
       Company: "Canva",
       Title: "Junior Software Engineer",
       Location: "Melbourne, Australia",
@@ -42,7 +39,6 @@ export const exampleResume = {
     },
     {
       id: getNextElementId(),
-      reference: "Google",
       Company: "Google",
       Title: "Senior Software Engineer",
       Location: "Melbourne, Australia",
@@ -52,26 +48,24 @@ export const exampleResume = {
   ],
 };
 
-export function createEmptyEducationTemplate() {
+export function createEducationTemplate() {
   return {
     id: getNextElementId(),
-    reference: "New Education",
-    School: "New Education",
-    Degree: "",
-    Location: "",
-    "Start Date": "",
-    "End Date": "",
+    School: "New School",
+    Degree: "Bachelor of Computer Science",
+    Location: "Melbourne, Australia",
+    "Start Date": "01/01/2020",
+    "End Date": "Present",
   };
 }
 
-export function createEmptyExperienceTemplate() {
+export function createExperienceTemplate() {
   return {
     id: getNextElementId(),
-    reference: "New Experience",
-    Company: "New Experience",
-    Title: "",
-    Location: "",
-    "Start Date": "",
-    "End Date": "",
+    Company: "New Company",
+    Title: "Software Engineer",
+    Location: "Melbourne, Australia",
+    "Start Date": "01/01/2020",
+    "End Date": "Present",
   };
 }
