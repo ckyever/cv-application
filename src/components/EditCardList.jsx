@@ -2,7 +2,6 @@ import Card from "./Card.jsx";
 
 import { SIDEBAR_MODE } from "../constants.js";
 import Field from "../libs/Field.js";
-import { resume } from "react-dom/server";
 
 function updateFullname(resumeData, setResumeData, value) {
   const newResumeData = { ...resumeData };
