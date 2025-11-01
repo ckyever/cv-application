@@ -19,6 +19,16 @@
   gap: 12px;
 }
 
+.resume .header .personal-details p {
+  display: flex;
+  justify-content: center;
+}
+
+.resume .header .personal-details .icon {
+  width: 25px;
+  margin-right: 8px;
+}
+
 .resume section {
   padding: 30px 60px;
 }

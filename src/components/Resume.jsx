@@ -1,4 +1,7 @@
 import "../styles/Resume.css";
+import emailIcon from "../assets/email.svg";
+import phoneIcon from "../assets/cellphone.svg";
+import locationIcon from "../assets/map-marker.svg";
 
 function Resume({ resumeData }) {
   return (
@@ -6,9 +9,18 @@ function Resume({ resumeData }) {
       <section className="header">
         <h1>{resumeData.fullname}</h1>
         <div className="personal-details">
-          <p>{resumeData.email}</p>
-          <p>{resumeData.phoneNumber}</p>
-          <p>{resumeData.address}</p>
+          <p>
+            <img className="icon" src={emailIcon} />
+            {resumeData.email}
+          </p>
+          <p>
+            <img className="icon" src={phoneIcon} />
+            {resumeData.phoneNumber}
+          </p>
+          <p>
+            <img className="icon" src={locationIcon} />
+            {resumeData.address}
+          </p>
         </div>
       </section>
       <section className="education-list">
