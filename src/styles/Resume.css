@@ -5,6 +5,20 @@
   background-color: var(--card-background-color);
 }
 
+.resume.left,
+.resume.right {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+}
+
+/* Make top level resume divs reverse in order but ensure all children read in the same direction */
+.resume.right {
+  direction: rtl;
+}
+.resume.right > * {
+  direction: ltr;
+}
+
 .resume .header {
   display: flex;
   flex-direction: column;
@@ -14,9 +28,26 @@
   color: var(--alt-text-color);
 }
 
+.resume.left .header,
+.resume.right .header {
+  justify-content: flex-start;
+  padding: 25px;
+}
+
+.resume.left .header h1,
+.resume.right .header h1 {
+  margin-bottom: 20px;
+}
+
 .resume .header .personal-details {
   display: flex;
   gap: 12px;
+}
+
+.resume.left .header .personal-details,
+.resume.right .header .personal-details {
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .resume .header .personal-details p {
@@ -43,6 +74,11 @@
   margin: 8px 0;
   display: grid;
   grid-template-columns: 3fr 1fr;
+}
+
+.resume.left .education,
+.resume.left .experience {
+  grid-template-columns: 1.5fr 1fr;
 }
 
 .resume .duration-location {

@@ -1,7 +1,7 @@
 import "../styles/EditCardList.css";
 import Card from "./Card.jsx";
 
-import { SIDEBAR_MODE, EDIT_ELEMENT_KEY } from "../constants.js";
+import { SIDEBAR_MODE, EDIT_ELEMENT_KEY, LAYOUT_OPTION } from "../constants.js";
 import Field from "../libs/Field.js";
 
 import personalDetailsIcon from "../assets/account.svg";
@@ -29,6 +29,12 @@ function updatePhoneNumber(resumeData, setResumeData, value) {
 function updateAddress(resumeData, setResumeData, value) {
   const newResumeData = { ...resumeData };
   newResumeData.address = value;
+  setResumeData(newResumeData);
+}
+
+function updateLayout(resumeData, setResumeData, value) {
+  const newResumeData = { ...resumeData };
+  newResumeData.layout = value;
   setResumeData(newResumeData);
 }
 
@@ -84,13 +90,25 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
         <div className="edit-card-list">
           <Card title="Layout">
             <div className="layout-options">
-              <button>
+              <button
+                onClick={() =>
+                  updateLayout(resumeData, setResumeData, LAYOUT_OPTION.top)
+                }
+              >
                 <div className="layout-icon"></div>Top
               </button>
-              <button>
+              <button
+                onClick={() =>
+                  updateLayout(resumeData, setResumeData, LAYOUT_OPTION.left)
+                }
+              >
                 <div className="layout-icon left"></div>Left
               </button>
-              <button>
+              <button
+                onClick={() =>
+                  updateLayout(resumeData, setResumeData, LAYOUT_OPTION.right)
+                }
+              >
                 <div className="layout-icon right"></div>Right
               </button>
             </div>

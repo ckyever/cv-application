@@ -1,3 +1,5 @@
+import { LAYOUT_OPTION } from "./constants.js";
+
 let elementId = 0;
 
 function getNextElementId() {
@@ -50,6 +52,7 @@ export const exampleResume = {
       "End Date": "Present",
     },
   ],
+  layout: LAYOUT_OPTION.top,
 };
 
 export function createEducationTemplate() {
