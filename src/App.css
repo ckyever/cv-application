@@ -6,10 +6,11 @@
   --accent-color: #0f364d;
   --rounded-corners: 10px;
   --hover-color: #f5f5f5;
+  --outline-color: #3c75d8;
 }
 
 * {
-  outline-color: #3c75d8;
+  outline-color: var(--outline-color);
 }
 
 body {

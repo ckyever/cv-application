@@ -94,6 +94,9 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
                 onClick={() =>
                   updateLayout(resumeData, setResumeData, LAYOUT_OPTION.top)
                 }
+                className={
+                  resumeData.layout === LAYOUT_OPTION.top && "selected"
+                }
               >
                 <div className="layout-icon"></div>Top
               </button>
@@ -101,12 +104,18 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
                 onClick={() =>
                   updateLayout(resumeData, setResumeData, LAYOUT_OPTION.left)
                 }
+                className={
+                  resumeData.layout === LAYOUT_OPTION.left && "selected"
+                }
               >
                 <div className="layout-icon left"></div>Left
               </button>
               <button
                 onClick={() =>
                   updateLayout(resumeData, setResumeData, LAYOUT_OPTION.right)
+                }
+                className={
+                  resumeData.layout === LAYOUT_OPTION.right && "selected"
                 }
               >
                 <div className="layout-icon right"></div>Right

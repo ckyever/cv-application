@@ -21,6 +21,10 @@
   border-radius: var(--rounded-corners);
 }
 
+.edit-card-list .layout-options button.selected .layout-icon {
+  border: 3px solid var(--outline-color);
+}
+
 .edit-card-list .layout-options .layout-icon.left {
   transform: rotate(-90deg);
 }
