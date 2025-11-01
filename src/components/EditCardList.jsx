@@ -154,7 +154,7 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
                   );
                 }}
               />
-              <label htmlFor="color-picker">Accent Colour</label>
+              <label htmlFor="color-picker">Accent</label>
             </div>
           </Card>
           <Card title="Font">
