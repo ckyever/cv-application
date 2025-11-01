@@ -27,7 +27,6 @@
     var(--card-background-color) 50%
   );
   border: 1px solid black;
-  border-radius: var(--rounded-corners);
 }
 
 .edit-card-list .customise-options button.selected .layout-icon,
@@ -45,11 +44,12 @@
 }
 
 input[type="color" i] {
-  border-radius: var(--rounded-corners);
-  width: 40px;
-  height: 40px;
-  border-color: none;
-  background-color: var(--main-background-color);
+  padding: 0;
+  width: 43px;
+  height: 45px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
 }
 
 .edit-card-list .customise-options .font-icon {
@@ -58,5 +58,4 @@ input[type="color" i] {
   width: 40px;
   height: 40px;
   padding: 4px;
-  border-radius: var(--rounded-corners);
 }
