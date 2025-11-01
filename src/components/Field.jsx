@@ -7,17 +7,31 @@ function Field({ fieldData }) {
   return (
     <div className="field">
       <label htmlFor={fieldData.id}>{fieldData.label}</label>
-      <input
-        id={fieldData.id}
-        type={fieldData.fieldType}
-        value={value}
-        onChange={(event) => {
-          setValue(event.target.value);
-          fieldData.handleOnChange == null
-            ? undefined
-            : fieldData.handleOnChange(event.target.value);
-        }}
-      />
+      {fieldData.label === "Description" ? (
+        <textarea
+          id={fieldData.id}
+          type={fieldData.fieldType}
+          value={value}
+          onChange={(event) => {
+            setValue(event.target.value);
+            fieldData.handleOnChange == null
+              ? undefined
+              : fieldData.handleOnChange(event.target.value);
+          }}
+        />
+      ) : (
+        <input
+          id={fieldData.id}
+          type={fieldData.fieldType}
+          value={value}
+          onChange={(event) => {
+            setValue(event.target.value);
+            fieldData.handleOnChange == null
+              ? undefined
+              : fieldData.handleOnChange(event.target.value);
+          }}
+        />
+      )}
     </div>
   );
 }

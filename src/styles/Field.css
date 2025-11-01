@@ -3,11 +3,17 @@
   flex-direction: column;
 }
 
-.field input {
+.field input,
+.field textarea {
   border: none;
   background-color: var(--main-background-color);
   padding: 8px;
   border-radius: var(--rounded-corners);
+}
+
+.field textarea {
+  height: 200px;
+  resize: vertical;
 }
 
 .field label {
