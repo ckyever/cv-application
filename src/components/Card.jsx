@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/Card.css";
+import addIcon from "../assets/plus.svg";
 
 import { EDIT_ELEMENT_KEY } from "../constants.js";
 import { createEducationTemplate, createExperienceTemplate } from "../data.js";
@@ -62,13 +63,14 @@ function Card({
         ))}
       {editElements && (
         <button
+          className="add-button"
           onClick={() => {
             setExpandedId(
               addNewElement(editElementKey, resumeData, setResumeData)
             );
           }}
         >
-          Add
+          <img className="add-icon" src={addIcon} alt="Add icon" />
         </button>
       )}
     </div>
