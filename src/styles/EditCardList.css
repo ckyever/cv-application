@@ -59,3 +59,9 @@ input[type="color" i] {
   height: 40px;
   padding: 4px;
 }
+
+.edit-card-list .customise-options label,
+.edit-card-list .customise-options button {
+  color: var(--lighter-main-text-color);
+  font-weight: 500;
+}
