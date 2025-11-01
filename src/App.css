@@ -13,6 +13,10 @@
   outline-color: var(--outline-color);
 }
 
+html {
+  overflow-y: scroll; /* Always show vertical scrollbar to prevent layout jumping when it does appear */
+}
+
 body {
   background-color: var(--main-background-color);
   font-family: "Inter", sans-serif;
