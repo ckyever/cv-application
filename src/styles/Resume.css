@@ -35,12 +35,15 @@
   align-items: center;
   background-color: var(--accent-color);
   color: var(--alt-text-color);
+  padding-bottom: 30px;
+  height: 150px;
 }
 
 .resume.left .header,
 .resume.right .header {
   justify-content: flex-start;
   padding: 25px;
+  height: auto;
 }
 
 .resume.left .header h1,
@@ -70,7 +73,7 @@
 }
 
 .resume section {
-  padding: 30px 60px;
+  padding: 30px 60px 0 60px;
 }
 
 .resume section h2 {
