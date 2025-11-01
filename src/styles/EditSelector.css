@@ -56,4 +56,16 @@
 
 .edit-form.show {
   display: block;
+  animation: dropdown 0.25s ease-in-out;
+  transform-origin: top;
+}
+
+@keyframes dropdown {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
 }
