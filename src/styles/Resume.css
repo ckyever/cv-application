@@ -3,6 +3,8 @@
 }
 
 .resume {
+  position: sticky;
+  top: 40px;
   align-self: flex-start;
   width: 795px;
   min-height: 1125px;
