@@ -11,5 +11,6 @@
 }
 
 .field label {
-  font-weight: 600;
+  color: var(--lighter-main-text-color);
+  font-weight: 500;
 }
