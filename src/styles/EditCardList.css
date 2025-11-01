@@ -26,7 +26,8 @@
 
 .edit-card-list .customise-options button.selected .layout-icon,
 .edit-card-list .customise-options button.selected .font-icon {
-  border: 3px solid var(--outline-color);
+  border: none;
+  outline: 3px solid var(--outline-color);
 }
 
 .edit-card-list .customise-options .layout-icon.left {
