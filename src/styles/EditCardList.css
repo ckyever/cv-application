@@ -1,15 +1,18 @@
-.edit-card-list .layout-options {
+.edit-card-list .customise-options {
   display: flex;
   gap: 16px;
 }
 
-.edit-card-list .layout-options button {
+.edit-card-list .customise-options button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
-.edit-card-list .layout-options .layout-icon {
+.edit-card-list .customise-options .layout-icon {
   width: 40px;
   height: 40px;
   background: linear-gradient(
@@ -21,15 +24,16 @@
   border-radius: var(--rounded-corners);
 }
 
-.edit-card-list .layout-options button.selected .layout-icon {
+.edit-card-list .customise-options button.selected .layout-icon,
+.edit-card-list .customise-options button.selected .font-icon {
   border: 3px solid var(--outline-color);
 }
 
-.edit-card-list .layout-options .layout-icon.left {
+.edit-card-list .customise-options .layout-icon.left {
   transform: rotate(-90deg);
 }
 
-.edit-card-list .layout-options .layout-icon.right {
+.edit-card-list .customise-options .layout-icon.right {
   transform: rotate(90deg);
 }
 
@@ -47,4 +51,12 @@ input[type="color" i] {
   height: 30px;
   border-color: none;
   background-color: var(--main-background-color);
+}
+
+.edit-card-list .customise-options .font-icon {
+  font-size: 1.4rem;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  padding: 4px;
 }

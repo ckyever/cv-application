@@ -1,4 +1,4 @@
-import { LAYOUT_OPTION } from "./constants.js";
+import { LAYOUT_OPTION, FONT_OPTION } from "./constants.js";
 
 let elementId = 0;
 
@@ -53,6 +53,7 @@ export const exampleResume = {
     },
   ],
   layout: LAYOUT_OPTION.top,
+  font: FONT_OPTION.serif,
 };
 
 export function createEducationTemplate() {

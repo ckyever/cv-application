@@ -1,7 +1,12 @@
 import "../styles/EditCardList.css";
 import Card from "./Card.jsx";
 
-import { SIDEBAR_MODE, EDIT_ELEMENT_KEY, LAYOUT_OPTION } from "../constants.js";
+import {
+  SIDEBAR_MODE,
+  EDIT_ELEMENT_KEY,
+  LAYOUT_OPTION,
+  FONT_OPTION,
+} from "../constants.js";
 import Field from "../libs/Field.js";
 
 import personalDetailsIcon from "../assets/account.svg";
@@ -35,6 +40,12 @@ function updateAddress(resumeData, setResumeData, value) {
 function updateLayout(resumeData, setResumeData, value) {
   const newResumeData = { ...resumeData };
   newResumeData.layout = value;
+  setResumeData(newResumeData);
+}
+
+function updateFont(resumeData, setResumeData, value) {
+  const newResumeData = { ...resumeData };
+  newResumeData.font = value;
   setResumeData(newResumeData);
 }
 
@@ -89,7 +100,7 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
       return (
         <div className="edit-card-list">
           <Card title="Layout">
-            <div className="layout-options">
+            <div className="customise-options">
               <button
                 onClick={() =>
                   updateLayout(resumeData, setResumeData, LAYOUT_OPTION.top)
@@ -144,6 +155,55 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
                 }}
               />
               <label htmlFor="color-picker">Accent Colour</label>
+            </div>
+          </Card>
+          <Card title="Font">
+            <div className="customise-options">
+              <button
+                style={{ fontFamily: "serif" }}
+                onClick={() => {
+                  updateFont(resumeData, setResumeData, FONT_OPTION.serif);
+                  document.documentElement.style.setProperty(
+                    "--resume-font",
+                    FONT_OPTION.serif
+                  );
+                }}
+                className={
+                  resumeData.font === FONT_OPTION.serif ? "selected" : undefined
+                }
+              >
+                <div className="font-icon">Aa</div>Serif
+              </button>
+              <button
+                style={{ fontFamily: "sans-serif" }}
+                onClick={() => {
+                  updateFont(resumeData, setResumeData, FONT_OPTION.sans);
+                  document.documentElement.style.setProperty(
+                    "--resume-font",
+                    FONT_OPTION.sans
+                  );
+                }}
+                className={
+                  resumeData.font === FONT_OPTION.sans ? "selected" : undefined
+                }
+              >
+                <div className="font-icon">Aa</div>Sans
+              </button>
+              <button
+                style={{ fontFamily: "monospace", fontSize: "1rem" }}
+                onClick={() => {
+                  updateFont(resumeData, setResumeData, FONT_OPTION.mono);
+                  document.documentElement.style.setProperty(
+                    "--resume-font",
+                    FONT_OPTION.mono
+                  );
+                }}
+                className={
+                  resumeData.font === FONT_OPTION.mono ? "selected" : undefined
+                }
+              >
+                <div className="font-icon">Aa</div>Mono
+              </button>
             </div>
           </Card>
         </div>

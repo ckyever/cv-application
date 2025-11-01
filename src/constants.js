@@ -13,3 +13,9 @@ export const LAYOUT_OPTION = {
   left: "left",
   right: "right",
 };
+
+export const FONT_OPTION = {
+  serif: "serif",
+  sans: "sans-serif",
+  mono: "monospace",
+};
