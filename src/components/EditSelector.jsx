@@ -42,7 +42,7 @@ function EditSelector({
             src={chevronDown}
             alt="Chevron"
           />
-          <p>{reference}</p>
+          <p className="reference">{reference}</p>
         </button>
         <button
           className="delete-element"

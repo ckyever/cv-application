@@ -48,6 +48,13 @@
   background-image: url("../assets/delete-empty-outline.svg");
 }
 
+.selector-buttons .edit-element .reference {
+  font-size: 1.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .edit-form {
   display: none;
   background-color: var(--card-background-color);
