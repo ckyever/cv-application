@@ -35,6 +35,7 @@ function Card({
   editElements,
   resumeData,
   setResumeData,
+  children,
 }) {
   const [expandedId, setExpandedId] = useState(null);
   return (
@@ -74,6 +75,7 @@ function Card({
           Add
         </button>
       )}
+      {children}
     </div>
   );
 }

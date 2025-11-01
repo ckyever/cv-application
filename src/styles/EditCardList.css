@@ -1,0 +1,30 @@
+.edit-card-list .layout-options {
+  display: flex;
+  gap: 16px;
+}
+
+.edit-card-list .layout-options button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-card-list .layout-options .layout-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(
+    to bottom,
+    var(--accent-color) 50%,
+    var(--card-background-color) 50%
+  );
+  border: 1px solid black;
+  border-radius: var(--rounded-corners);
+}
+
+.edit-card-list .layout-options .layout-icon.left {
+  transform: rotate(-90deg);
+}
+
+.edit-card-list .layout-options .layout-icon.right {
+  transform: rotate(90deg);
+}

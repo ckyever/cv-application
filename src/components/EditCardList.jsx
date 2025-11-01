@@ -1,3 +1,4 @@
+import "../styles/EditCardList.css";
 import Card from "./Card.jsx";
 
 import { SIDEBAR_MODE, EDIT_ELEMENT_KEY } from "../constants.js";
@@ -81,9 +82,19 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
     case SIDEBAR_MODE.customise:
       return (
         <div className="edit-card-list">
-          {/* <Card title="Layout" />
-          <Card title="Color" />
-          <Card title="Fonts" /> */}
+          <Card title="Layout">
+            <div className="layout-options">
+              <button>
+                <div className="layout-icon"></div>Top
+              </button>
+              <button>
+                <div className="layout-icon left"></div>Left
+              </button>
+              <button>
+                <div className="layout-icon right"></div>Right
+              </button>
+            </div>
+          </Card>
         </div>
       );
 
