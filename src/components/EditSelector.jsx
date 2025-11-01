@@ -51,7 +51,7 @@ function EditSelector({
           }}
         ></button>
       </div>
-      <form className={"edit-form" + (isExpanded ? "show" : "")}>
+      <form className={isExpanded ? "edit-form show" : "edit-form"}>
         {Object.keys(element).map((key) => {
           if (key !== "reference" && key !== "id") {
             const id = `${element.id}-${key}`;

@@ -28,7 +28,7 @@
 }
 
 .card .add-button:hover {
-  background-color: var(--main-background-color);
+  background-color: var(--hover-color);
   cursor: pointer;
 }
 

@@ -1,17 +1,25 @@
-.edit-selector {
-  border-radius: var(--rounded-corners);
-}
-
 .selector-buttons {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+  border-radius: var(--rounded-corners);
   font-weight: 600;
 }
 
+.selector-buttons:hover {
+  background-color: var(--hover-color);
+  cursor: pointer;
+}
+
 .selector-buttons button {
+  height: 50px;
   background-color: transparent;
   border: none;
+}
+
+.selector-buttons button:hover {
+  cursor: pointer;
 }
 
 .selector-buttons .edit-element {
@@ -33,6 +41,7 @@
   height: 24px;
   background: url("../assets/delete-outline.svg") no-repeat center/cover;
   cursor: pointer;
+  margin-right: 8px;
 }
 
 .selector-buttons .delete-element:hover {
@@ -41,6 +50,8 @@
 
 .edit-form {
   display: none;
+  background-color: var(--card-background-color);
+  margin-left: 8px;
 }
 
 .edit-form.show {
