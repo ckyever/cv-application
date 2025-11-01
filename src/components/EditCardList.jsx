@@ -12,6 +12,9 @@ import Field from "../libs/Field.js";
 import personalDetailsIcon from "../assets/account.svg";
 import educationIcon from "../assets/school.svg";
 import experienceIcon from "../assets/briefcase.svg";
+import layoutIcon from "../assets/floor-plan.svg";
+import colourIcon from "../assets/palette.svg";
+import fontIcon from "../assets/format-font.svg";
 
 function updateFullname(resumeData, setResumeData, value) {
   const newResumeData = { ...resumeData };
@@ -99,7 +102,7 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
     case SIDEBAR_MODE.customise:
       return (
         <div className="edit-card-list">
-          <Card title="Layout">
+          <Card title="Layout" titleIcon={layoutIcon}>
             <div className="customise-options">
               <button
                 onClick={() =>
@@ -139,7 +142,7 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
               </button>
             </div>
           </Card>
-          <Card title="Colour">
+          <Card title="Colour" titleIcon={colourIcon}>
             <div id="accent-color">
               <input
                 id="color-picker"
@@ -157,7 +160,7 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
               <label htmlFor="color-picker">Accent</label>
             </div>
           </Card>
-          <Card title="Font">
+          <Card title="Font" titleIcon={fontIcon}>
             <div className="customise-options">
               <button
                 style={{ fontFamily: "serif" }}

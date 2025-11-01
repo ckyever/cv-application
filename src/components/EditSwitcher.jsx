@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "../styles/EditSwitcher.css";
 import contentIcon from "../assets/note-edit-outline.svg";
-import customiseIcon from "../assets/palette-outline.svg";
+import customiseIcon from "../assets/palette-swatch-outline.svg";
 
 import { SIDEBAR_MODE } from "../constants.js";
 
