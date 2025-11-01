@@ -1,3 +1,7 @@
+.edit-selector {
+  margin-bottom: 4px;
+}
+
 .selector-buttons {
   display: flex;
   justify-content: space-between;
