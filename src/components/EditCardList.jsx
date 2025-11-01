@@ -102,6 +102,24 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
     case SIDEBAR_MODE.customise:
       return (
         <div className="edit-card-list">
+          <Card title="Colour" titleIcon={colourIcon}>
+            <div id="accent-color">
+              <input
+                id="color-picker"
+                type="color"
+                defaultValue={getComputedStyle(
+                  document.documentElement
+                ).getPropertyValue("--accent-color")}
+                onChange={(event) => {
+                  document.documentElement.style.setProperty(
+                    "--accent-color",
+                    event.target.value
+                  );
+                }}
+              />
+              <label htmlFor="color-picker">Accent</label>
+            </div>
+          </Card>
           <Card title="Layout" titleIcon={layoutIcon}>
             <div className="customise-options">
               <button
@@ -140,24 +158,6 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
               >
                 <div className="layout-icon right"></div>Right
               </button>
-            </div>
-          </Card>
-          <Card title="Colour" titleIcon={colourIcon}>
-            <div id="accent-color">
-              <input
-                id="color-picker"
-                type="color"
-                defaultValue={getComputedStyle(
-                  document.documentElement
-                ).getPropertyValue("--accent-color")}
-                onChange={(event) => {
-                  document.documentElement.style.setProperty(
-                    "--accent-color",
-                    event.target.value
-                  );
-                }}
-              />
-              <label htmlFor="color-picker">Accent</label>
             </div>
           </Card>
           <Card title="Font" titleIcon={fontIcon}>
