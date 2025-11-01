@@ -6,7 +6,7 @@
 }
 
 .card {
-  min-width: 330px;
+  width: 330px;
   padding: 20px;
   box-shadow: var(--card-shadow);
   border-radius: var(--rounded-corners);
@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  min-width: 330px;
+  width: 330px;
 }
 
 @media (max-width: 800px) {
