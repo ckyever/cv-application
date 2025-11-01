@@ -71,6 +71,7 @@ function Card({
           }}
         >
           <img className="add-icon" src={addIcon} alt="Add icon" />
+          Add
         </button>
       )}
     </div>
