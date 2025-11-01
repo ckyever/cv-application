@@ -1,0 +1,25 @@
+.edit-switcher.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.edit-switcher.card button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: var(--rounded-corners);
+  padding: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.edit-switcher.card button.selected {
+  background-color: var(--main-background-color);
+}
+
+.edit-switcher.card .icon {
+  width: 25px;
+}
