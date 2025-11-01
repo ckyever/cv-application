@@ -1,4 +1,5 @@
 import "../styles/EditSelector.css";
+import chevronDown from "../assets/chevron-down.svg";
 
 import FieldData from "../libs/Field.js";
 import Field from "./Field.jsx";
@@ -36,6 +37,11 @@ function EditSelector({
             isExpanded ? setExpandedId(null) : setExpandedId(element.id)
           }
         >
+          <img
+            className={isExpanded ? "icon collapse" : "icon expand"}
+            src={chevronDown}
+            alt="Chevron"
+          />
           <p>{reference}</p>
         </button>
         <button

@@ -4,6 +4,7 @@
   --main-text-color: #010101;
   --alt-text-color: #ffffff;
   --accent-color: #0f364d;
+  --rounded-corners: 10px;
 }
 
 * {

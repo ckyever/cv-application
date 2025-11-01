@@ -1,11 +1,31 @@
+.edit-selector {
+  border-radius: var(--rounded-corners);
+}
+
 .selector-buttons {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  font-weight: 600;
+}
+
+.selector-buttons button {
+  background-color: transparent;
+  border: none;
 }
 
 .edit-element {
+  display: flex;
+  align-items: center;
   width: 100%;
+}
+
+.edit-element .icon {
+  width: 25px;
+}
+
+.edit-element .icon.collapse {
+  transform: scaleY(-1);
 }
 
 .edit-form {
