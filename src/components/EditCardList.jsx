@@ -103,21 +103,39 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
       return (
         <div className="edit-card-list">
           <Card title="Colour" titleIcon={colourIcon}>
-            <div id="accent-color">
-              <input
-                id="color-picker"
-                type="color"
-                defaultValue={getComputedStyle(
-                  document.documentElement
-                ).getPropertyValue("--accent-color")}
-                onChange={(event) => {
-                  document.documentElement.style.setProperty(
-                    "--accent-color",
-                    event.target.value
-                  );
-                }}
-              />
-              <label htmlFor="color-picker">Accent</label>
+            <div className="customise-options">
+              <div className="color-option">
+                <input
+                  id="accent-picker"
+                  type="color"
+                  defaultValue={getComputedStyle(
+                    document.documentElement
+                  ).getPropertyValue("--accent-color")}
+                  onChange={(event) => {
+                    document.documentElement.style.setProperty(
+                      "--accent-color",
+                      event.target.value
+                    );
+                  }}
+                />
+                <label htmlFor="accent-picker">Header</label>
+              </div>
+              <div className="color-option">
+                <input
+                  id="subheading-picker"
+                  type="color"
+                  defaultValue={getComputedStyle(
+                    document.documentElement
+                  ).getPropertyValue("--subheading-color")}
+                  onChange={(event) => {
+                    document.documentElement.style.setProperty(
+                      "--subheading-color",
+                      event.target.value
+                    );
+                  }}
+                />
+                <label htmlFor="subheading-picker">Subheaders</label>
+              </div>
             </div>
           </Card>
           <Card title="Layout" titleIcon={layoutIcon}>

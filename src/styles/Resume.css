@@ -1,5 +1,6 @@
 :root {
   --resume-font: serif;
+  --subheading-color: #ebecef;
 }
 
 .resume {
@@ -73,7 +74,7 @@
 }
 
 .resume section h2 {
-  background-color: var(--main-background-color);
+  background-color: var(--subheading-color);
   text-align: center;
 }
 
