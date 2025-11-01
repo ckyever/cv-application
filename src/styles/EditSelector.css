@@ -30,6 +30,7 @@
 
 .selector-buttons .edit-element .icon {
   width: 25px;
+  margin-right: 4px;
 }
 
 .selector-buttons .edit-element .icon.collapse {
