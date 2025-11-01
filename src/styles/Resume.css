@@ -107,3 +107,11 @@
 .resume .experience .title {
   font-style: italic;
 }
+
+@media (max-width: 800px) {
+  .resume {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+}

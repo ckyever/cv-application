@@ -50,3 +50,18 @@ body {
 .reset-button:hover {
   background-color: var(--hover-color);
 }
+
+@media (max-width: 800px) {
+  .app {
+    margin: 0;
+    flex-direction: column-reverse;
+    font-size: 0.8rem;
+  }
+
+  .reset-button {
+    position: absolute;
+    opacity: 0.5;
+    top: 0;
+    right: 0;
+  }
+}

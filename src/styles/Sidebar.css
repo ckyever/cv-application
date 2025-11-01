@@ -18,3 +18,12 @@
   gap: 40px;
   min-width: 330px;
 }
+
+@media (max-width: 800px) {
+  .edit-card-list {
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+  }
+}
