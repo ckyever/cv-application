@@ -14,18 +14,29 @@
   border: none;
 }
 
-.edit-element {
+.selector-buttons .edit-element {
   display: flex;
   align-items: center;
   width: 100%;
 }
 
-.edit-element .icon {
+.selector-buttons .edit-element .icon {
   width: 25px;
 }
 
-.edit-element .icon.collapse {
+.selector-buttons .edit-element .icon.collapse {
   transform: scaleY(-1);
+}
+
+.selector-buttons .delete-element {
+  width: 24px;
+  height: 24px;
+  background: url("../assets/delete-outline.svg") no-repeat center/cover;
+  cursor: pointer;
+}
+
+.selector-buttons .delete-element:hover {
+  background-image: url("../assets/delete-empty-outline.svg");
 }
 
 .edit-form {

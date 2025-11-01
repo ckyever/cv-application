@@ -49,9 +49,7 @@ function EditSelector({
           onClick={() => {
             handleDelete(listKey, element.id, resumeData, setResumeData);
           }}
-        >
-          Delete
-        </button>
+        ></button>
       </div>
       <form className={"edit-form" + (isExpanded ? "show" : "")}>
         {Object.keys(element).map((key) => {
