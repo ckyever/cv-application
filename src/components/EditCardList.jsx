@@ -3,6 +3,10 @@ import Card from "./Card.jsx";
 import { SIDEBAR_MODE, EDIT_ELEMENT_KEY } from "../constants.js";
 import Field from "../libs/Field.js";
 
+import personalDetailsIcon from "../assets/account.svg";
+import educationIcon from "../assets/school.svg";
+import experienceIcon from "../assets/briefcase.svg";
+
 function updateFullname(resumeData, setResumeData, value) {
   const newResumeData = { ...resumeData };
   newResumeData.fullname = value;
@@ -51,9 +55,14 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
     case SIDEBAR_MODE.content:
       return (
         <div className="edit-card-list">
-          <Card title="Personal Details" fields={personalDetailsFields} />
+          <Card
+            title="Personal Details"
+            titleIcon={personalDetailsIcon}
+            fields={personalDetailsFields}
+          />
           <Card
             title="Education"
+            titleIcon={educationIcon}
             editElementKey={EDIT_ELEMENT_KEY.education}
             editElements={resumeData.educationList}
             resumeData={resumeData}
@@ -61,6 +70,7 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
           />
           <Card
             title="Experience"
+            titleIcon={experienceIcon}
             editElementKey={EDIT_ELEMENT_KEY.experience}
             editElements={resumeData.experienceList}
             resumeData={resumeData}

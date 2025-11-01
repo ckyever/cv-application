@@ -28,6 +28,7 @@ function addNewElement(editElementKey, resumeData, setResumeData) {
 
 function Card({
   title,
+  titleIcon,
   fields,
   editElementKey,
   editElements,
@@ -37,7 +38,12 @@ function Card({
   const [expandedId, setExpandedId] = useState(null);
   return (
     <div className="card">
-      <h2>{title}</h2>
+      <div className="title">
+        {titleIcon && (
+          <img className="icon" src={titleIcon} alt={title + " icon"} />
+        )}
+        <h2>{title}</h2>
+      </div>
       {fields &&
         fields.length > 0 &&
         fields.map((field) => <Field key={field.id} fieldData={field} />)}

@@ -4,3 +4,13 @@
   background-color: var(--card-background-color);
   gap: 8px;
 }
+
+.card .title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card .title .icon {
+  width: 20px;
+}

@@ -12,10 +12,6 @@
   border-radius: var(--rounded-corners);
 }
 
-.card h2 {
-  margin-top: -12px;
-}
-
 .edit-card-list {
   display: flex;
   flex-direction: column;
