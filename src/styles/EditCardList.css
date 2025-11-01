@@ -32,3 +32,19 @@
 .edit-card-list .layout-options .layout-icon.right {
   transform: rotate(90deg);
 }
+
+.edit-card-list #accent-color {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="color" i] {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-color: none;
+  background-color: var(--main-background-color);
+}

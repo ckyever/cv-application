@@ -12,7 +12,7 @@ function EditSwitcher({ handleSwitch }) {
     <div className="edit-switcher card">
       <button
         id={SIDEBAR_MODE.content}
-        className={selectedId === SIDEBAR_MODE.content && "selected"}
+        className={selectedId === SIDEBAR_MODE.content ? "selected" : undefined}
         onClick={() => {
           handleSwitch(SIDEBAR_MODE.content);
           setSelectedId(SIDEBAR_MODE.content);
@@ -23,7 +23,9 @@ function EditSwitcher({ handleSwitch }) {
       </button>
       <button
         id={SIDEBAR_MODE.customise}
-        className={selectedId === SIDEBAR_MODE.customise && "selected"}
+        className={
+          selectedId === SIDEBAR_MODE.customise ? "selected" : undefined
+        }
         onClick={() => {
           handleSwitch(SIDEBAR_MODE.customise);
           setSelectedId(SIDEBAR_MODE.customise);

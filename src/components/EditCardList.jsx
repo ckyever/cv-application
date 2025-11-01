@@ -95,7 +95,9 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
                   updateLayout(resumeData, setResumeData, LAYOUT_OPTION.top)
                 }
                 className={
-                  resumeData.layout === LAYOUT_OPTION.top && "selected"
+                  resumeData.layout === LAYOUT_OPTION.top
+                    ? "selected"
+                    : undefined
                 }
               >
                 <div className="layout-icon"></div>Top
@@ -105,7 +107,9 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
                   updateLayout(resumeData, setResumeData, LAYOUT_OPTION.left)
                 }
                 className={
-                  resumeData.layout === LAYOUT_OPTION.left && "selected"
+                  resumeData.layout === LAYOUT_OPTION.left
+                    ? "selected"
+                    : undefined
                 }
               >
                 <div className="layout-icon left"></div>Left
@@ -115,11 +119,31 @@ function EditCardList({ editMode, resumeData, setResumeData }) {
                   updateLayout(resumeData, setResumeData, LAYOUT_OPTION.right)
                 }
                 className={
-                  resumeData.layout === LAYOUT_OPTION.right && "selected"
+                  resumeData.layout === LAYOUT_OPTION.right
+                    ? "selected"
+                    : undefined
                 }
               >
                 <div className="layout-icon right"></div>Right
               </button>
+            </div>
+          </Card>
+          <Card title="Colour">
+            <div id="accent-color">
+              <input
+                id="color-picker"
+                type="color"
+                defaultValue={getComputedStyle(
+                  document.documentElement
+                ).getPropertyValue("--accent-color")}
+                onChange={(event) => {
+                  document.documentElement.style.setProperty(
+                    "--accent-color",
+                    event.target.value
+                  );
+                }}
+              />
+              <label htmlFor="color-picker">Accent Colour</label>
             </div>
           </Card>
         </div>
