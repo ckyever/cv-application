@@ -50,9 +50,11 @@ function Resume({ resumeData }) {
                 </div>
                 <div className="duration-location">
                   <p>{education["Location"]}</p>
-                  <p>
-                    {education["Start Date"]} - {education["End Date"]}
-                  </p>
+                  {education["Start Date"] || education["End Date"] ? (
+                    <p>
+                      {education["Start Date"]} - {education["End Date"]}
+                    </p>
+                  ) : undefined}
                 </div>
               </div>
             );
@@ -69,9 +71,11 @@ function Resume({ resumeData }) {
                 </div>
                 <div className="duration-location">
                   <p>{experience["Location"]}</p>
-                  <p>
-                    {experience["Start Date"]} - {experience["End Date"]}
-                  </p>
+                  {experience["Start Date"] || experience["End Date"] ? (
+                    <p>
+                      {experience["Start Date"]} - {experience["End Date"]}
+                    </p>
+                  ) : undefined}
                 </div>
                 <p className="description">{experience["Description"]}</p>
               </div>
