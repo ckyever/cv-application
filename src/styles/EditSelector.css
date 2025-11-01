@@ -62,7 +62,9 @@
 }
 
 .edit-form.show {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   animation: dropdown 0.25s ease-in-out;
   transform-origin: top;
 }
