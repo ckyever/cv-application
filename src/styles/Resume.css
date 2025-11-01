@@ -78,11 +78,13 @@
 .resume .experience {
   margin: 8px 0;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2.5fr 1fr;
 }
 
 .resume.left .education,
-.resume.left .experience {
+.resume.left .experience,
+.resume.right .education,
+.resume.right .experience {
   grid-template-columns: 1.5fr 1fr;
 }
 
