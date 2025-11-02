@@ -2,11 +2,11 @@
 
 A website to enter details and generate a CV. Built with React, Vite, HTML5, CSS3, and JavaScript (ES6+).
 
-👉 [Live Demo]()
+👉 [Live Demo](https://cv-application-bg8.pages.dev/)
 
 ## Acknowledgement
 
-Inspired from [The Odin Project](https://www.theodinproject.com/lessons/node-path-react-new-setting-up-a-react-environment)
+Inspired from [The Odin Project](https://www.theodinproject.com/lessons/node-path-react-new-cv-application)
 
 ## License
 
