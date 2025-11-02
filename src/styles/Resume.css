@@ -110,7 +110,15 @@
 
 @media (max-width: 1200px) {
   .resume section {
-    padding: 20px 50px 0 50px;
+    padding: 20px 40px 0 40px;
+  }
+
+  .resume .header {
+    height: 130px;
+  }
+
+  .resume .personal-details {
+    font-size: 0.8rem;
   }
 }
 
@@ -129,5 +137,13 @@
 @media (max-width: 600px) {
   .resume section {
     padding: 10px 20px 0 20px;
+  }
+
+  .resume .header {
+    height: 120px;
+  }
+
+  .resume .personal-details {
+    font-size: 0.7rem;
   }
 }
